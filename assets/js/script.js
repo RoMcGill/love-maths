@@ -40,7 +40,21 @@ function runGame(gameType) {
 function checkAnswer() {
 
 }
+/**
+ * get opperands and operator
+ * directly from dom and returns correct answer
+ */
 function calculateCorrectAnswer() {
+    let operand1 = parseInt(document.getElementById('operand1').innertext);
+    let operand2 = parseInt(document.getElementById('operand2').innertext);
+    let operator = document.getElementById("operator").innerText;
+
+    if (operator ==="+"){
+        return[operand1 +operand2, "addition"];
+    } else{
+        alert(`unimplemented operator and ${operator}`);
+        throw `unimplimented operator ${operator}.Aborting!`;
+    }
 
 }
 function incrementScore() {
